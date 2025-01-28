@@ -1,0 +1,201 @@
+<html>
+<head>
+    <title>Ketentuan Penggunaan - Eclipse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A;
+            color: #D2D2D2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0;
+            position: relative;
+        }
+        .header img {
+            height: 20px;
+        }
+        .header .nav-links {
+            display: flex;
+            align-items: left;
+            transition: all 0.3s ease-in-out;
+        }
+        .header .nav-links a {
+            margin-left: 20px;
+            color: #D2D2D2;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .header .menu-button {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #D2D2D2;
+        }
+        @media (max-width: 768px) {
+            .header .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #1F1F1F;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            .header .nav-links.active {
+                display: flex;
+            }
+            .header .nav-links a {
+                margin: 10px 0;
+                font-size: 16px;
+                text-align: left;
+            }
+            .header .menu-button {
+                display: block;
+            }
+        }
+        .main-content {
+            text-align: left;
+            padding: 50px 0;
+        }
+        .main-content h1 {
+            font-size: 48px;
+            color: #CFFF2B;
+            margin: 0;
+        }
+        .main-content h2 {
+            font-size: 36px;
+            color: #ffffff;
+            margin: 10px 0;
+        }
+        .main-content p {
+            font-size: 18px;
+            color: #cccccc;
+            margin: 20px 0;
+        }
+        .footer {
+            background-color: none;
+            padding: 15px 50;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .footer .footer-links a {
+            margin: 0 5px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .footer .footer-links a:hover {
+            color: #CFFF2B;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #cccccc;
+            margin: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.menu-button');
+            const navLinks = document.querySelector('.nav-links');
+            const body = document.body;
+
+            menuButton.addEventListener('click', function(event) {
+                navLinks.classList.toggle('active');
+                event.stopPropagation(); // Mencegah klik pada tombol menutup menu
+            });
+
+            body.addEventListener('click', function() {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            navLinks.addEventListener('click', function(event) {
+                event.stopPropagation(); // Mencegah klik pada navLinks menutup menu
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img alt="Eclipse logo" src="https://files.catbox.moe/38104y.png"/>
+            </div>
+            <div class="nav-links">
+                <a href="/"><i class="fas fa-home"></i>   Home</a>
+                <a href="/download"><i class="fas fa-download"></i>   Download</a>
+                <a href="/tos"><i class="far fa-question-circle"></i>   Terms of Use</a>
+                <a href="https://eclipse.biz.id"><i class="fas fa-globe"></i>   Website</a>
+            </div>
+            <div class="menu-button">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="main-content">
+            <h1>Terms of Use</h1>
+            <h2>Eclipse: </h2>
+            <p>Selamat datang di Eclipse! Ketentuan dan syarat ini mengatur penggunaan platform baca komik kami. Dengan mengakses atau menggunakan platform kami, Anda setuju untuk terikat dengan ketentuan ini.</p>
+
+            <h3>1. Penggunaan Layanan</h3>
+            <p>1.1 Anda setuju untuk menggunakan platform kami hanya untuk tujuan yang sah dan sesuai dengan hukum yang berlaku.  
+            1.2 Anda tidak boleh mengunggah, mendistribusikan, atau membagikan konten yang melanggar hak cipta atau hak kekayaan intelektual lainnya.</p>
+
+            <h3>2. Hak Cipta dan Kepemilikan</h3>
+            <p>2.1 Semua konten di platform, termasuk tetapi tidak terbatas pada gambar komik, teks, dan desain, dilindungi oleh hukum hak cipta dan kekayaan intelektual.  
+            2.2 Dengan menggunakan platform, Anda diberikan lisensi terbatas, non-eksklusif, dan tidak dapat dipindahtangankan untuk mengakses dan membaca konten.</p>
+
+            <h3>3. Pengunggahan Konten Pengguna</h3>
+            <p>3.1 Jika Anda mengunggah konten, Anda memberikan kami hak untuk menggunakan, menampilkan, dan mendistribusikan konten tersebut di dalam platform.  
+            3.2 Anda menjamin bahwa Anda memiliki hak atas konten tersebut dan bahwa konten tersebut tidak melanggar hak pihak ketiga.</p>
+
+            <h3>4. Pembatasan Tanggung Jawab</h3>
+            <p>4.1 Layanan kami disediakan "sebagaimana adanya" dan kami tidak menjamin ketersediaan atau kualitas konten.  
+            4.2 Kami tidak bertanggung jawab atas kerugian atau kerusakan yang timbul dari penggunaan platform kami.</p>
+
+            <h3>5. Kebijakan Privasi</h3>
+            <p>5.1 Penggunaan platform kami juga tunduk pada Kebijakan Privasi kami, yang menguraikan bagaimana kami mengumpulkan dan melindungi informasi pribadi Anda.</p>
+
+            <h3>6. Modifikasi dan Pembaruan</h3>
+            <p>6.1 Kami dapat memperbarui ketentuan ini kapan saja. Setiap perubahan akan dicerminkan dengan memperbarui tanggal "Diperbarui Terakhir" di bagian atas halaman ini.</p>
+
+            <h3>7. Penghentian</h3>
+            <p>7.1 Kami berhak untuk menghentikan atau menangguhkan akses Anda ke platform kami jika Anda melanggar ketentuan ini.</p>
+        </div>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://whatsapp.com/channel/0029Vax90LzG3R3hvEXiXR0f"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/VarrelKun"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/gopalasu_?igsh=cXgzeHRwYnFobHY1"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>© 2025 Eclipse. Semua hak dilindungi.</p>
+        </div>
+    </div>
+</body>
+</html>

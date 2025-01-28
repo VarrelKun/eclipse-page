@@ -1,0 +1,259 @@
+<html>
+<head>
+    <title>Eclipse - Download Aplikasi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1A1A1A;
+            color: #D2D2D2;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            flex: 1;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0;
+            position: relative;
+        }
+        .header img {
+            height: 20px;
+        }
+        .header .nav-links {
+            display: flex;
+            align-items: left;
+            transition: all 0.3s ease-in-out;
+        }
+        .header .nav-links a {
+            margin-left: 20px;
+            color: #D2D2D2;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .header .menu-button {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #D2D2D2;
+        }
+        .main-content .buttons .download {
+            background-color: #CFFF2B;
+            color: #000000;
+        }
+        @media (max-width: 768px) {
+            .header .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #1F1F1F;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                padding: 10px 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            .header .nav-links.active {
+                display: flex;
+            }
+            .header .nav-links a {
+                margin: 10px 0;
+                font-size: 16px;
+                text-align: left;
+            }
+            .header .menu-button {
+                display: block;
+            }
+        }
+        .main-content {
+            text-align: center;
+            padding: 10px 0;
+        }
+        .main-content h1 {
+            font-size: 48px;
+            color: #CFFF2B;
+            margin: 10;
+        }
+        .main-content h2 {
+            font-size: 36px;
+            color: #ffffff;
+            margin: 5px 0;
+        }
+        .main-content p {
+            font-size: 18px;
+            color: #cccccc;
+            margin: 20px 0;
+        }
+        .main-content .buttons {
+            margin: 20px 0;
+        }
+        .main-content .buttons a {
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 35px;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .main-content .buttons .manuals {
+            background-color: #111111;
+            color: #ffffff;
+            border: 1px solid #4c4c4c;
+        }
+        .main-content img {
+            margin-top: 30px;
+            width: 150px;
+        }
+        .file-card {
+            background-color: #111111;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 250px;
+            margin: 50px auto; /* Card positioned above the button */
+        }
+        .file-card h4 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .file-card p {
+            font-size: 15px;
+            color: #cccccc;
+            margin: 0 0;
+            text-align: left;
+        }
+        .info-card {
+            background-color: #111111;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 450px;
+            margin: 50px auto; /* Card positioned above the button */
+        }
+        .info-card h3 {
+            font-size: 20px;
+            color: #ffffff;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .info-card p {
+            font-size: 15px;
+            color: #cccccc;
+            margin: 0 0;
+            text-align: left;
+        }
+        .footer {
+            background-color: none;
+            padding: 15px 50;
+            text-align: center;
+            margin-top: auto;
+        }
+        .footer .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        .footer .footer-links a {
+            margin: 0 5px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+        .footer .footer-links a:hover {
+            color: #CFFF2B;
+        }
+        .footer p {
+            font-size: 14px;
+            color: #cccccc;
+            margin: 0;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.menu-button');
+            const navLinks = document.querySelector('.nav-links');
+            const body = document.body;
+
+            menuButton.addEventListener('click', function(event) {
+                navLinks.classList.toggle('active');
+                event.stopPropagation(); // Mencegah klik pada tombol menutup menu
+            });
+
+            body.addEventListener('click', function() {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+
+            navLinks.addEventListener('click', function(event) {
+                event.stopPropagation(); // Mencegah klik pada navLinks menutup menu
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img alt="Eclipse logo" src="https://files.catbox.moe/38104y.png"/>
+            </div>
+            <div class="nav-links">
+                <a href="/"><i class="fas fa-home"></i>   Home</a>
+                <a href="/download"><i class="fas fa-download"></i>   Download</a>
+                <a href="/tos"><i class="far fa-question-circle"></i>   Terms of Use</a>
+                <a href="https://eclipse.biz.id"><i class="fas fa-globe"></i>   Website</a>
+            </div>
+            <div class="menu-button">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+        <div class="main-content">
+            <img alt="Eclipse mascot" src="https://files.catbox.moe/k79ikc.png"/>
+            <h1>ECLIPSE</h1>
+            <h2>1.1</h2>
+            <div class="file-card">
+            	<h4>File Information</h4>
+                <p><strong><i class="fas fa-file"></i>‎‎‎ • File Size:</strong> 0.84 MB</p>
+                <p><strong><i class="fas fa-calendar-alt"></i>  • Upload Date:</strong> 2025-01-28</p>
+                <p><strong><i class="fas fa-mobile-alt"></i>    ‎ ‎• Type:</strong> .apk</p>
+            </div>
+            <div class="buttons">
+    <a class="download" href="https://github.com/VarrelKun/xreader-comics/releases/download/apk/app-release.apk"><i class="fas fa-download"></i>   Download</a>
+</div>
+<div class="info-card">
+    <h3>Cara pasang Aplikasi</h3>
+<p>Jangan Lupa untuk Izinkan Android Kalian untuk Install Aplikasi Pihak Ketiga. Jangan Khawatir Aplikasi Eclipse Bebas dari Virus dan Phising.
+
+Jika ada notifikasi google play setting, jangan klik tombol berwarna biru, klik diatasnya dan akan muncul tulisan "install Anyway" atau "tetap install", kalo gak bisa di-klik kalian pilih opsi "Pindai".
+</p>
+</div>
+<p style="margin-top: 20px; text-align: center; font-size: 14px; color: #cccccc;">
+    <h4>Unduh dan pasang Eclipse 1.1 APK</h4>
+    Cara resmi untuk memasang aplikasi Android adalah melalui Google Play Store. Untuk memasang Eclipse 1.1 APK dari situs web kami, Anda mungkin perlu mengaktifkan opsi 'izinkan instalasi dari sumber tidak dikenal' pada perangkat Android Anda. Anda dapat membaca lebih lanjut tentang menginstal APK sebagai aplikasi tidak dikenal di situs resmi Android Developer SDK.
+</p>
+        </div>
+        <div class="footer">
+            <div class="footer-links">
+                <a href="https://whatsapp.com/channel/0029Vax90LzG3R3hvEXiXR0f"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://github.com/VarrelKun"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/gopalasu_?igsh=cXgzeHRwYnFobHY1"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>© 2025 Eclipse. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
