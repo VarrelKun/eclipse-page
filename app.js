@@ -24,6 +24,9 @@ app.get('/sitemap.xml', (req, res) => {
 app.get('/robots.txt', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'robots.txt'));
 });
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));
+});
 
 // Start server
 app.listen(PORT, () => {
