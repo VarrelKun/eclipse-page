@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://eclipse.web.id/sitemap.xml
