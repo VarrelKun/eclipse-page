@@ -27,6 +27,9 @@ app.get('/robots.txt', (req, res) => {
 app.get('/favicon.ico', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'favicon.ico'));
 });
+app.get('/ads.txt', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'ads.txt'));
+});
 
 // Start server
 app.listen(PORT, () => {
